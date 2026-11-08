@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gizlilik Politikası — Bebek Monitörü</title>
+<meta name="description" content="Bebek Monitörü uygulamasının gizlilik politikası ve Google Drive erişim açıklaması.">
+<style>
+  :root {
+    --bg: #0f1115; --surface: #171a21; --line: #2a2f3a;
+    --text: #e6e9ef; --muted: #9aa3b2; --accent: #6aa9ff;
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg: #ffffff; --surface: #f6f7f9; --line: #e3e6ea;
+      --text: #1a1d23; --muted: #5c6472; --accent: #1a6fd4;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  main { max-width: 680px; margin: 0 auto; padding: 48px 20px 80px; }
+  h1 { font-size: 26px; letter-spacing: -0.4px; margin: 0 0 4px; }
+  h2 { font-size: 18px; margin: 34px 0 10px; }
+  h3 { font-size: 15px; margin: 22px 0 8px; color: var(--muted);
+       text-transform: uppercase; letter-spacing: .06em; }
+  p { margin: 0 0 14px; }
+  ul { padding-left: 20px; margin: 0 0 14px; }
+  li { margin-bottom: 7px; }
+  a { color: var(--accent); }
+  .updated { color: var(--muted); font-size: 14px; margin-bottom: 26px; }
+  .card {
+    background: var(--surface); border: 1px solid var(--line);
+    border-radius: 12px; padding: 16px 18px; margin: 20px 0;
+  }
+  .card p:last-child, .card ul:last-child { margin-bottom: 0; }
+  code {
+    background: var(--surface); border: 1px solid var(--line);
+    border-radius: 5px; padding: 1px 5px; font-size: 14px;
+  }
+  table { border-collapse: collapse; width: 100%; margin: 0 0 14px; font-size: 15px; }
+  th, td { text-align: left; padding: 9px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { color: var(--muted); font-weight: 600; }
+  footer {
+    margin-top: 44px; padding-top: 20px; border-top: 1px solid var(--line);
+    color: var(--muted); font-size: 14px;
+  }
+  .en { color: var(--muted); font-size: 14.5px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Gizlilik Politikası</h1>
+  <p class="updated">Bebek Monitörü · Son güncelleme: 8 Kasım 2026</p>
+
+  <p>
+    Bebek Monitörü, kişisel kullanım için yazılmış açık kaynaklı bir bebek ses
+    monitörüdür. Ticari bir hizmet sunmaz, kullanıcı hesabı satmaz ve reklam
+    göstermez.
+  </p>
+
+  <div class="card">
+    <p>
+      <strong>Özet:</strong> Uygulama yalnızca sizin kendi sunucunuzda ve sizin
+      kendi Google Drive hesabınızda çalışır. Geliştirici olarak ses
+      kayıtlarınıza, Drive dosyalarınıza veya hesap bilgilerinize erişimim
+      yoktur. Hiçbir veri üçüncü taraflarla paylaşılmaz veya satılmaz.
+    </p>
+  </div>
+
+  <h2>Hangi veriler işlenir</h2>
+
+  <table>
+    <tr>
+      <th>Veri</th>
+      <th>Nerede durur</th>
+      <th>Neden</th>
+    </tr>
+    <tr>
+      <td>Ses kayıtları</td>
+      <td>Kullanıcının kendi Google Drive hesabı</td>
+      <td>Ebeveynin sonradan dinleyebilmesi için</td>
+    </tr>
+    <tr>
+      <td>Canlı ses yayını</td>
+      <td>Hiçbir yerde saklanmaz</td>
+      <td>Tablet ile ebeveyn arasında doğrudan (WebRTC) akar</td>
+    </tr>
+    <tr>
+      <td>E-posta ve parola özeti</td>
+      <td>Kullanıcının kendi sunucusu</td>
+      <td>Panele yalnızca ebeveynin girebilmesi için</td>
+    </tr>
+    <tr>
+      <td>Cihaz eşleştirme bilgisi</td>
+      <td>Kullanıcının kendi sunucusu</td>
+      <td>Tabletin tek bir hesaba bağlanması için</td>
+    </tr>
+  </table>
+
+  <p>
+    Uygulamanın sunucusu kullanıcı tarafından kurulur ve işletilir. Geliştirici
+    bu sunucuyu barındırmaz ve ona erişemez.
+  </p>
+
+  <h2>Google kullanıcı verileri</h2>
+
+  <h3>İstenen izin</h3>
+  <p>
+    Uygulama tek bir Google izni ister:
+    <code>https://www.googleapis.com/auth/drive.file</code>
+  </p>
+  <p>
+    Bu izin, uygulamanın <strong>yalnızca kendisinin oluşturduğu dosyaları</strong>
+    görmesine, düzenlemesine ve silmesine olanak tanır. Google Drive
+    hesabınızdaki diğer dosyalar, klasörler ve belgeler uygulamaya
+    <strong>kapalıdır</strong> — uygulama onları listeleyemez, okuyamaz ve
+    göremez.
+  </p>
+
+  <h3>İznin kullanımı</h3>
+  <ul>
+    <li>Drive hesabınızda bir kayıt klasörü oluşturmak</li>
+    <li>Ses kayıtlarını bu klasöre yüklemek</li>
+    <li>Siz panelden dinlemek istediğinizde kaydı geri okumak</li>
+    <li>Siz panelden sildiğinizde kaydı Drive'dan da silmek</li>
+  </ul>
+  <p>
+    Bunların dışında hiçbir amaçla kullanılmaz. Veriler yapay zekâ modeli
+    eğitmek için kullanılmaz, analiz edilmez ve aktarılmaz.
+  </p>
+
+  <h3>Paylaşım</h3>
+  <p>
+    Google kullanıcı verileri hiçbir üçüncü tarafla paylaşılmaz, satılmaz veya
+    kiralanmaz. Veriler yalnızca sizin Drive hesabınız ile sizin sunucunuz
+    arasında hareket eder.
+  </p>
+
+  <h3>Saklama ve silme</h3>
+  <p>
+    Kayıtlar siz silene kadar kendi Drive hesabınızda kalır. Panelden bir kaydı
+    sildiğinizde Drive'daki dosya da silinir. Tüm erişimi istediğiniz an
+    kaldırabilirsiniz:
+    <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">
+      myaccount.google.com/permissions</a>
+  </p>
+  <p class="en">
+    <strong>English summary:</strong> This app requests only the
+    <code>drive.file</code> scope, which limits access to files the app itself
+    created. It cannot see any other file in your Google Drive. Recordings are
+    stored in the user's own Google Drive and processed only by the user's own
+    self-hosted server. No Google user data is shared with third parties, sold,
+    or used to train AI models. Access can be revoked at any time at
+    <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">
+      myaccount.google.com/permissions</a>.
+  </p>
+
+  <h2>Mikrofon ve ses</h2>
+  <p>
+    Monitör uygulaması mikrofona yalnızca ebeveyn panelinden komut geldiğinde
+    erişir. Mikrofon açıkken durum gizlenmez:
+  </p>
+  <ul>
+    <li>Tabletin ekranında büyük bir uyarı şeridi görünür</li>
+    <li>Kaldırılamayan kalıcı bir bildirim durumu gösterir ve mikrofonu
+        kapatma düğmesi sunar</li>
+    <li>Android'in sistem gizlilik göstergesi ayrıca yanar</li>
+  </ul>
+  <p>
+    Canlı ses yayını uçtan uca şifrelidir (DTLS-SRTP) ve sunucu üzerinde
+    saklanmaz.
+  </p>
+
+  <h2>Çocuklara ilişkin not</h2>
+  <p>
+    Uygulama çocuklar tarafından kullanılmak üzere tasarlanmamıştır. Kaydedilen
+    ses, uygulamayı kuran ebeveynin kendi evindeki ortam sesidir ve yalnızca o
+    ebeveynin kendi hesaplarında saklanır.
+  </p>
+
+  <h2>Değişiklikler</h2>
+  <p>
+    Bu politika değişirse bu sayfadaki tarih güncellenir.
+  </p>
+
+  <h2>İletişim</h2>
+  <p>
+    <a href="mailto:nicat.abishov61@gmail.com">nicat.abishov61@gmail.com</a>
+  </p>
+
+  <footer>
+    <a href="hakkinda.html">← Hakkında</a>
+  </footer>
+</main>
+</body>
+</html>
