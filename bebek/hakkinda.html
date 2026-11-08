@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bebek Monitörü</title>
+<meta name="description" content="Kişisel kullanım için açık kaynaklı bebek ses monitörü uygulaması.">
+<style>
+  :root {
+    --bg: #0f1115; --surface: #171a21; --line: #2a2f3a;
+    --text: #e6e9ef; --muted: #9aa3b2; --accent: #6aa9ff;
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg: #ffffff; --surface: #f6f7f9; --line: #e3e6ea;
+      --text: #1a1d23; --muted: #5c6472; --accent: #1a6fd4;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  main { max-width: 680px; margin: 0 auto; padding: 48px 20px 80px; }
+  h1 { font-size: 28px; letter-spacing: -0.4px; margin: 0 0 6px; }
+  h2 { font-size: 18px; margin: 36px 0 10px; }
+  p { margin: 0 0 14px; }
+  .lede { color: var(--muted); font-size: 17px; margin-bottom: 28px; }
+  ul { padding-left: 20px; margin: 0 0 14px; }
+  li { margin-bottom: 7px; }
+  a { color: var(--accent); }
+  .card {
+    background: var(--surface); border: 1px solid var(--line);
+    border-radius: 12px; padding: 16px 18px; margin: 20px 0;
+  }
+  .card p:last-child { margin-bottom: 0; }
+  footer {
+    margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--line);
+    color: var(--muted); font-size: 14px;
+  }
+  code {
+    background: var(--surface); border: 1px solid var(--line);
+    border-radius: 5px; padding: 1px 5px; font-size: 14px;
+  }
+</style>
+</head>
+<body>
+<main>
+  <h1>Bebek Monitörü</h1>
+  <p class="lede">
+    Kişisel kullanım için yazılmış, açık kaynaklı bir bebek ses monitörü.
+    Ticari bir ürün değildir ve dağıtılmamaktadır.
+  </p>
+
+  <h2>Ne yapar</h2>
+  <p>
+    İki parçadan oluşur. Bebek odasındaki bir Android tablete kurulan
+    <strong>monitör uygulaması</strong> ve ebeveynin telefonundan ya da
+    tarayıcısından açtığı <strong>kontrol paneli</strong>.
+  </p>
+  <ul>
+    <li>Ebeveyn panelden komut verdiğinde tablet canlı ses yayını başlatır
+        (WebRTC, uçtan uca şifreli).</li>
+    <li>Ebeveyn isterse ses kaydı alınır ve kaydın sahibinin kendi Google
+        Drive hesabına yüklenir.</li>
+    <li>Kayıtlar yalnızca giriş yapmış ebeveyne, kısa ömürlü imzalı
+        adreslerle sunulur.</li>
+  </ul>
+
+  <h2>Şeffaflık</h2>
+  <div class="card">
+    <p>
+      Bu bir gizli dinleme aracı değildir ve öyle çalışmaz:
+    </p>
+    <ul>
+      <li>Tabletin ekranında her zaman “Bebek monitörü” yazar.</li>
+      <li>Mikrofon açıkken ekranda büyük, nabız atan bir uyarı şeridi çıkar.</li>
+      <li>Kaldırılamayan kalıcı bir bildirim durumu gösterir ve üzerinde
+          <strong>“Mikrofonu kapat”</strong> düğmesi vardır.</li>
+      <li>Mikrofon izni ilk açılışta açıkça istenir; izin verildikten sonra
+          bile mikrofon kapalı kalır ve yalnızca komutla açılır.</li>
+    </ul>
+  </div>
+
+  <h2>Google Drive erişimi</h2>
+  <p>
+    Uygulama <code>drive.file</code> kapsamını kullanır. Bu kapsam,
+    uygulamanın <strong>yalnızca kendi oluşturduğu dosyaları</strong> görmesine
+    izin verir — Drive hesabınızdaki diğer dosyalara erişimi yoktur.
+  </p>
+  <p>
+    Ayrıntılar için <a href="gizlilik.html">gizlilik politikası</a>.
+  </p>
+
+  <h2>Destek</h2>
+  <p>
+    Soru ve bildirimler için: <a href="mailto:nicat.abishov61@gmail.com">nicat.abishov61@gmail.com</a>
+  </p>
+
+  <footer>
+    Kişisel proje · Ticari kullanım yoktur ·
+    <a href="gizlilik.html">Gizlilik politikası</a> ·
+    <a href="/">Ebeveyn paneli</a>
+  </footer>
+</main>
+</body>
+</html>
